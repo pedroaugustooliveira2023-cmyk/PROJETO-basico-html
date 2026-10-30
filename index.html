@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio pessoal de Pedro, desenvolvedor web iniciante."
+    >
+
+    <title>Pedro | Portfólio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <a class="logo" href="#inicio">
+                Pedro<span>.</span>
+            </a>
+
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="inicio-conteudo">
+                <p class="apresentacao">Olá, eu sou</p>
+
+                <h1>Pedro</h1>
+
+                <h2>Desenvolvedor Web Iniciante</h2>
+
+                <p class="inicio-texto">
+                    Estou aprendendo a criar sites modernos, responsivos
+                    e fáceis de usar com HTML, CSS e JavaScript.
+                </p>
+
+                <div class="botoes">
+                    <a
+                        class="botao botao-principal"
+                        href="#projetos"
+                    >
+                        Ver projetos
+                    </a>
+
+                    <a
+                        class="botao botao-secundario"
+                        href="#contato"
+                    >
+                        Falar comigo
+                    </a>
+                </div>
+            </div>
+
+            <div class="perfil">
+                <div class="perfil-circulo">P</div>
+            </div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <div class="titulo-secao">
+                <p>Conheça um pouco</p>
+                <h2>Sobre mim</h2>
+            </div>
+
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>
+                        Meu nome é Pedro e estou começando minha jornada
+                        no desenvolvimento web. Gosto de aprender coisas
+                        novas e transformar ideias em páginas na internet.
+                    </p>
+
+                    <p>
+                        Atualmente estudo HTML, CSS e JavaScript para criar
+                        projetos cada vez mais completos e profissionais.
+                    </p>
+                </div>
+
+                <div class="habilidades">
+                    <h3>Minhas habilidades</h3>
+
+                    <div class="lista-habilidades">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao projetos">
+            <div class="titulo-secao">
+                <p>Alguns dos meus trabalhos</p>
+                <h2>Meus projetos</h2>
+            </div>
+
+            <div class="grade-projetos">
+                <article class="card">
+                    <div class="card-numero">01</div>
+
+                    <h3>Meu portfólio</h3>
+
+                    <p>
+                        Site desenvolvido para apresentar minhas
+                        habilidades e meus primeiros projetos.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <a class="link-projeto" href="#inicio">
+                        Ver projeto →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-numero">02</div>
+
+                    <h3>Página de receitas</h3>
+
+                    <p>
+                        Uma página organizada para apresentar receitas,
+                        ingredientes e modos de preparo.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <span class="link-projeto">Em breve</span>
+                </article>
+
+                <article class="card">
+                    <div class="card-numero">03</div>
+
+                    <h3>Lista de tarefas</h3>
+
+                    <p>
+                        Aplicação para organizar tarefas diárias de forma
+                        simples, rápida e prática.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <span class="link-projeto">Em breve</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="secao contato">
+            <div class="contato-conteudo">
+                <p>Vamos conversar?</p>
+
+                <h2>Entre em contato comigo</h2>
+
+                <p class="contato-texto">
+                    Clique no botão abaixo para abrir uma nova mensagem
+                    no Gmail.
+                </p>
+
+                <a
+    class="botao botao-principal"
+    href="[mail.google.com](https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=pedro.augusto.oliveira2023@gmail.com&su=Contato%20pelo%20portfolio&body=Ola%20Pedro%2C%20encontrei%20seu%20portfolio)"
+    target="_blank"
+>
+    Enviar mensagem pelo Gmail
+</a>
+
+
+                <p class="email-alternativo">
+                    E-mail:
+                    <a href="mailto:pedro.augusto.oliveira2023@gmail.com">
+                        pedro.augusto.oliveira2023@gmail.com
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>
+            Feito por Pedro · <span id="ano"></span>
+        </p>
+    </footer>
+
+    <script>
+        const campoAno = document.querySelector("#ano");
+
+        if (campoAno) {
+            campoAno.textContent = new Date().getFullYear();
+        }
+
+        const botaoGmail = document.querySelector("#botao-gmail");
+
+        botaoGmail.addEventListener("click", function () {
+            const destinatario =
+                "pedro.augusto.oliveira2023@gmail.com";
+
+            const assunto = encodeURIComponent(
+                "Contato pelo portfólio"
+            );
+
+            const mensagem = encodeURIComponent(
+                "Olá, Pedro!\n\n" +
+                "Encontrei seu portfólio e gostaria de conversar com você."
+            );
+
+            const enderecoGmail =
+                "[mail.google.com](https://mail.google.com/mail/?view=cm&fs=1)" +
+                "&to=" + destinatario +
+                "&su=" + assunto +
+                "&body=" + mensagem;
+
+            const novaAba = window.open(
+                enderecoGmail,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            if (!novaAba) {
+                window.location.href = enderecoGmail;
+            }
+        });
+    </script>
+</body>
+</html>
